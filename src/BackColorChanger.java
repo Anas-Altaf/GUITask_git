@@ -6,12 +6,15 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 public class BackColorChanger extends JFrame implements ActionListener {
+
     private JButton redBtn, blueBtn, orangeBtn, grayBtn;
+
     public BackColorChanger() {
         setTitle("Color Changer");
         setLayout(new FlowLayout());
         redBtn = new JButton("Red");
         blueBtn = new JButton("Blue");
+
         orangeBtn = new JButton("Orange");
         grayBtn = new JButton("Gray");
         redBtn.addActionListener(this);
@@ -22,8 +25,9 @@ public class BackColorChanger extends JFrame implements ActionListener {
         add(blueBtn);
         add(orangeBtn);
         add(grayBtn);
+
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(300, 200);
+        setSize(200, 300);
         setLocation(0, 0);
         setVisible(true);
     }
@@ -33,10 +37,12 @@ public class BackColorChanger extends JFrame implements ActionListener {
             getContentPane().setBackground(Color.RED);
         } else if (e.getSource() == blueBtn) {
             getContentPane().setBackground(Color.BLUE);
+
         } else if (e.getSource() == orangeBtn) {
             getContentPane().setBackground(Color.ORANGE);
         } else if (e.getSource() == grayBtn) {
             getContentPane().setBackground(Color.GRAY);
+
         }
     }
     public static void main(String[] args) {
